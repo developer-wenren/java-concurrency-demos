@@ -1,4 +1,4 @@
-package org.example;
+package org.example.create;
 
 /**
  * 继承 Thread 方式创建线程
