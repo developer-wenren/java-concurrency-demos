@@ -16,14 +16,14 @@ public class App {
         myThread.start();
 
         //方式二
-        MyThread2 myThread2 = new MyThread2();
-        Thread thread = new Thread(myThread2);
+        MyRunnableThread myRunnableThread = new MyRunnableThread();
+        Thread thread = new Thread(myRunnableThread);
         thread.start();
 
         //方式三
-        MyThread3 myThread3 = new MyThread3();
+        MyCallableThread myCallableThread = new MyCallableThread();
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<String> submit = executorService.submit(myThread3);
+        Future<String> submit = executorService.submit(myCallableThread);
         try {
             String unused = submit.get();
             System.out.println("得到返回值：" + unused);
